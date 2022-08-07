@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border-style:  groove;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="lab2-3-login.html">
+        <table>
+            <tr>
+                <th><label for="Username">Username: </label></th>
+                <th><input type="text" id="Username" autofocus required></th>
+            </tr>
+            <tr>
+                <th><label for="Password" required>Password: </label></th>
+                <th><input type="password" id="Password" /></th>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <label for="check_robot">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ <br> 1559</label><br>
+                <input type="text" id="check_robot" pattern="^1559" required>
+            </td>
+            </tr>
+        </table>
+        <input type="image" src="https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454" style="height:50px; width: 60px" >
+    </form>
+</body>
+</html>

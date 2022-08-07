@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zip-code{
+            width: 80px;
+        }
+        div{
+           border-style: groove;
+           border-color: grey;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h3>เเบบฟอร์มจองทัวร์</h3>
+    <form>
+        <fieldset><legend>ข้อมูลทั่วไป</legend>
+            <table>
+                
+                    <label for="name">ชื่อ-สกุล:</label> <br>
+                    <input type="text" id="name" name="name" placeholder="กรอกชื่อ-สกุล" required> *<br>
+                    <label for="email">Email:</label> <br>
+                    <input type="email" id="email" required> *<br>
+                    <label for="phone">โทรศัพท์:</label> <br>
+                    <input type="text" id="phone" required value="+66" required> *<br>
+                    <label for="address">ที่อยู่:</label> <br>
+                    <textarea id="address" name="address" placeholder="" required></textarea><br>
+                    <label for="zip-code" >รหัสไปรษณีย์: </label> 
+                    <input id="zip-code" class="zip-code" name="zip-code" placeholder="" required pattern="\d{5}" ><br>
+                    <label for="photo">รูปผู้จอง: </label> 
+                    <input type="file" id="photo" name="photo" placeholder="" required>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset><legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <table>
+                <label for="Username">Username: </label><br>
+                <input type="text" id="Username" name="Username" placeholder="" required pattern="\w*8"><br>
+                <label><i>ประกอบไปด้วยตัวเลข ตัวอักษร หรือ_ ตั่งเเต่ 8 ตัวขึ้นไป</i></label><br>
+                <br><label for="Password">Password: </label><br>
+                <input type="password" id="password" name="password" placeholder="" required pattern=".{8,}"><br>
+                <label><i>ประกอบไปด้วยตัวอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></label>
+            </table>
+        </fieldset>
+       
+        <br>
+        <fieldset><legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <table>
+              <label for="package" id="package">เเพคเก็จทัวร์: </label>
+              <select  id="package" name="package">
+                <option value="Bangkok">Bangkok</option>
+                <option value="Laos">Laos</option>
+                <option value="Merlin">Merlin</option>
+              </select><br>
+              <label for="วันที่เดินทาง" id="วันที่เดินทาง">วันที่เดินทาง: </label>
+              <input type="date" id="date" required><br>
+              <label for="จำนวนผู้เดินทาง" id="จำนวนผู้เดินทาง">จำนวนผู้เดินทาง: </label>
+              <input type="number" id="จำนวนผู้เดินทาง" min="1" max="10"><br>
+              <label for="เน้นการท่องเที่ยว" id="เน้นการท่องเที่ยว">เน้นการท่องเที่ยวเเบบใด ?</label><br>
+              <input type="checkbox" id="travel1" value="ชอปปิ้ง">
+              <label for="travel1">ชอปปิ้ง</label><br>
+              <input type="checkbox" id="travel2" value="ธรรมชาติ">
+              <label for="travel2">ธรรมชาติ</label><br>
+              <input type="checkbox" id="travel3" value="ทะเล">
+              <label for="travel3">ทะเล</label><br>
+            </table>
+        </fieldset>
+        <br>
+        ยอมรับเงื่อนไขเเละข้อตกลง
+            <input type="radio" id="agreed" value="agreed" name="must" checked>
+            <label for="agreed">I agree</label>
+            <input type="radio" id="disagree" value="agreed" name="must">
+            <label for="agreed">I disagree</label>   
+            <input type="submit" id="submit" name="submit" value="จอง">
+    </form><br>
+    
+</div>
+
+   
+
+</body>
+</html>
